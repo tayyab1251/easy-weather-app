@@ -6,7 +6,7 @@
  
  * Developer   : Tayyab Sabir
  * Email       : tayyabsabir72@gmail.com
- * GitHub      : https://github.com/tayyab1251/
+ * GitHub      : https://github.com/tayyab1251/easy-weather-app
  * Year        : 2K24
  * -------------------------------------------------------------------------*/
 
@@ -26,7 +26,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'GET' && 
         exit("Please enter a valid city name.");
     }
 
-    $key = 'f5951fb2359845c6be04473825160510712l';
+    $key = 'YourAPIKeyHere';
 
     $BASE_URL = 'https://api.weatherapi.com';
     $API_PATH = '/v1/current.json?';
