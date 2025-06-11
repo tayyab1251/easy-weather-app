@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #121a2d;
+  color: #f4f4f9;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(60, 60, 161, 0.3),
+    rgba(33, 29, 41, 0.6)
+  );
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* title */
+.title {
+  text-align: center;
+}
+
+.appName {
+  font-size: 4rem;
+  padding: 1rem 0;
+  font-weight: 600;
+  color: #3c4a60;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+  text-shadow: 0 4px 10px rgba(14, 12, 82, 0.6);
+  color: #6fa3e8; 
+  transform: translateY(-5px);
+}
+
+
+/* search */
+.search-field {
+  width: 100%;
+  /* margin-bottom: 2rem; */
+}
+.search-field form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+}
+.userInput-div {
+  display: flex;
+  width: 80%;
+  max-width: 600px;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #333b4f;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.userInput {
+  width: 80%;
+  padding: 0.75rem;
+  border: none;
+  background-color: #3f4757;
+  color: #f4f4f9;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.userInput:focus {
+  background-color: #505d75;
+  color: #fff;
+}
+
+.submit-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  background-color: #5c6bc0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3f4c8c;
+  transform: scale(1.05);
+}
+
+/* main */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* left */
+.left-side {
+  width: 65%;
+  text-align: center;
+  color: #ffcc00;
+  transition: transform 0.2s ease;
+}
+
+.left-side:hover {
+  transform: scale(1.05);
+}
+
+.left-side h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.left-side .temp {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/*right */
+.right-side {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.weather-img:hover {
+  transform: rotate(10deg);
+}
+
+/* conditions */
+.conditions {
+  width: 100%;
+  background-color: rgba(60, 60, 161, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feelsLike {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.feelsLike .left,
+.feelsLike .right {
+  width: 45%;
+  text-align: center;
+  color: #f4f4f9;
+}
+
+.feelsLike h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.temp2,
+.chances,
+.index {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffcc00;
+}
+small{
+  font-size: 0.6rem;
+  color: #ffcc00;
+
+}
+/* media*/
+@media (max-width: 768px) {
+  .conditions{
+    display: block;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .userInput-div {
+    width: 100%;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
